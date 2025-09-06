@@ -13,7 +13,7 @@ public class TestaBanco {
         executar(banco, 1, 2, 200.0, 1);
         executar(banco, 2, 3, 800.0, 2);
         executar(banco, 3, 1, 50.0, 3);
-        executar(banco, 3, 4, 300.0, 4); // deve falhar (saldo insuficiente)
+        executar(banco, 3, 4, 300.0, 4);
         executar(banco, 2, 4, 300.0, 5);
         executar(banco, 4, 1, 100.0, 6);
         executar(banco, 1, 3, 1200.0, 7); // deve falhar (saldo insuficiente)

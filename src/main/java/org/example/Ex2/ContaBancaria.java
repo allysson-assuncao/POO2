@@ -10,7 +10,7 @@ public class ContaBancaria {
         this.numeroConta = numeroConta;
         this.saldo = saldoInicial;
         this.clienteEspecial = clienteEspecial;
-        this.limite = clienteEspecial ? Math.max(0.0, limite) : 0.0;
+        this.limite = clienteEspecial ? /*Math.max(0.0, */limite/*)*/ : 0.0;
     }
 
     public int getNumeroConta() {
@@ -31,7 +31,7 @@ public class ContaBancaria {
 
     public void debita(double v) throws SIException {
         if (v < 0) {
-            throw new IllegalArgumentException("Valor de débito inválido");
+            throw new IllegalArgumentException("Valor de débito inválido!");
         }
         double disponivel = saldo + (clienteEspecial ? limite : 0.0);
         if (v > disponivel) {
@@ -42,7 +42,7 @@ public class ContaBancaria {
 
     public void credita(double v) {
         if (v < 0) {
-            throw new IllegalArgumentException("Valor de crédito inválido");
+            throw new IllegalArgumentException("Valor de crédito inválido!");
         }
         saldo += v;
     }

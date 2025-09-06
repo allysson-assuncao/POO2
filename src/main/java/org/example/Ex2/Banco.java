@@ -38,7 +38,7 @@ public class Banco {
             if (saldo >= 0) {
                 totalDepositadoDisponivel += saldo;
             } else {
-                totalChequeEspecialUsado += -saldo;
+                totalChequeEspecialUsado -= saldo;
             }
         }
         System.out.println("=== Relatório ===");
