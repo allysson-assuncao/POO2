@@ -1,0 +1,5 @@
+A implementação da hierarquia da classe java.awt.geom.Point2D na API do Java AWT
+é um bom exemplo de aplicação de conceitos de orientação a objetos, como abstração,
+herança e polimorfismo. Essa estrutura permite que a API forneça uma interface comum e
+fácil de usar (Point2D) enquanto oferece múltiplas implementações otimizadas para
+diferentes casos de uso, equilibrando precisão, desempenho e uso de memória.
