@@ -15,12 +15,12 @@ public class RealizaOperacao {
         return calcularRec(operacao, numeros[0], numeros, 1);
     }
 
-    private static double calcularRec(Operacao operacao, double acumulado, double[] numeros, int index) {
+    private static double calcularRec(Operacao operacao, double resultado, double[] numeros, int index) {
         if (index >= numeros.length) {
-            return acumulado;
+            return resultado;
         }
-        double novoAcumulado = operacao.executar(acumulado, numeros[index]);
-        return calcularRec(operacao, novoAcumulado, numeros, index + 1);
+        double novoResultado = operacao.executar(resultado, numeros[index]);
+        return calcularRec(operacao, novoResultado, numeros, index + 1);
     }
 
     public static void main(String[] args) {
