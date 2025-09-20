@@ -1,6 +1,6 @@
-package org.example.generics.Ex5;
+package org.example.generics.Ex4;
 
-public class Pair<T> {
+public class Pair<T extends Comparable<? super T>> implements Comparable<Pair<T>> {
     private T first;
     private T second;
 
@@ -28,6 +28,21 @@ public class Pair<T> {
 
     public void setSecond(T second) {
         this.second = second;
+    }
+
+    @Override
+    public int compareTo(Pair<T> other) {
+        if (other == null) return 1; // non-null > null
+        int c = compareNullable(this.first, other.first);
+        if (c != 0) return c;
+        return compareNullable(this.second, other.second);
+    }
+
+    private int compareNullable(T a, T b) {
+        if (a == b) return 0;
+        if (a == null) return -1;
+        if (b == null) return 1;
+        return a.compareTo(b);
     }
 
     @Override
