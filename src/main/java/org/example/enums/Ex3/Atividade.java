@@ -22,16 +22,6 @@ public enum Atividade {PROJETO(40), TRABALHO(20), PROVA_PRATICA(30), PROVA_TEORI
             throw new IllegalArgumentException("É necessário informar ao menos uma atividade.");
         }
 
-        double somaPesosNormalizada = 0.0;
-        for (Atividade a : atividades) {
-            somaPesosNormalizada += a.peso / 100.0;
-        }
-
-        double EPS = 1e-9;
-        if (Math.abs(somaPesosNormalizada - 1.0) > EPS) {
-            throw new IllegalArgumentException("A soma dos pesos das atividades deve ser igual a 1.");
-        }
-
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < atividades.length; i++) {
             Atividade a = atividades[i];

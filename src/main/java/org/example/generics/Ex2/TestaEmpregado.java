@@ -8,7 +8,7 @@ public class TestaEmpregado {
 
         ArrayList<Employee> array = new ArrayList<>();
 
-        array.add(new Employee.Manager());
+        /*array.add(new Employee.Manager());*/
 
     }
 
