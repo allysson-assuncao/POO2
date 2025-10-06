@@ -1,4 +1,4 @@
-package org.example.generics3;
+package org.example.generics3.Ex1;
 
 // Erro: Enum may not have type parameters
 // Erro: enum types may not be generic

@@ -1,6 +1,4 @@
-package org.example.generics3;
-
-import java.util.Arrays;
+package org.example.generics3.Ex4;
 
 public class ComparadorDeArrays {
 

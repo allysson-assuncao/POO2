@@ -1,4 +1,4 @@
-package org.example.generics3;
+package org.example.generics3.Ex13;
 
 import java.util.ArrayList;
 import java.util.Collections;

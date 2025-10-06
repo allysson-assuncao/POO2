@@ -1,13 +1,10 @@
-package org.example.generics3;
+package org.example.generics3.Ex2;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class SomaPrimos {
 
-    /**
-     * Verifica se um número inteiro é primo.
-     */
     private static boolean isPrimo(int num) {
         if (num <= 1) {
             return false;
