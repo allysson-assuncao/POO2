@@ -17,14 +17,10 @@ public class SomaPrimos {
         return true;
     }
 
-    /**
-     * Método genérico que recebe uma lista de números e retorna a soma dos
-     * que são inteiros positivos e primos.
-     */
+    // Método genérico que recebe números quaiquer (coringa) e retorna a soma dos que são inteiros positivos e primos.
     public static long somarPrimosPositivos(List<? extends Number> lista) {
         long soma = 0;
         for (Number n : lista) {
-            // Verifica se é um inteiro, pois o conceito de primo se aplica a eles.
             if (n instanceof Integer) {
                 int valorInt = n.intValue();
                 if (valorInt > 0 && isPrimo(valorInt)) {
