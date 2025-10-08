@@ -1,4 +1,4 @@
-package org.example.generics3.Ex5;
+package org.example.generics3.Ex4;
 
 public class ComparadorDeArraysAvancado {
 
