@@ -37,12 +37,10 @@ public class SomaPrimos {
 
         System.out.println("Lista de Inteiros: " + listaDeInteiros);
         long soma1 = somarPrimosPositivos(listaDeInteiros);
-        // Soma esperada: 2 + 3 + 5 + 7 + 11 + 13 = 41
         System.out.println("Soma dos primos positivos: " + soma1);
 
         System.out.println("\nLista de Números: " + listaDeNumeros);
         long soma2 = somarPrimosPositivos(listaDeNumeros);
-        // Soma esperada: 17 + 23 + 31 = 71 (ignora 19.5 e 29.0, pois não são Integer)
         System.out.println("Soma dos primos positivos: " + soma2);
     }
 }
