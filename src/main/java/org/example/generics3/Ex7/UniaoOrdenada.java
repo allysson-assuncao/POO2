@@ -6,10 +6,7 @@ import java.util.List;
 
 public class UniaoOrdenada {
 
-    /**
-     * 1. Método genérico de ordenação (Selection Sort).
-     * O tipo T deve ser comparável.
-     */
+    // Método genérico de ordenação (Selection Sort). O tipo T deve ser comparável
     public static <T extends Comparable<T>> void selectionSort(T[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             int minIndex = i;
@@ -24,18 +21,14 @@ public class UniaoOrdenada {
         }
     }
 
-    /**
-     * 2. Método genérico para ordenar e unir dois arrays em uma lista ordenada.
-     */
+    // Método genérico para ordenar e unir dois arrays em uma lista ordenada
     public static <T extends Comparable<T>> List<T> unirArraysOrdenados(T[] array1, T[] array2) {
-        // Ordena os arrays de entrada primeiro
         selectionSort(array1);
         selectionSort(array2);
 
         List<T> listaUnida = new ArrayList<>();
-        int i = 0, j = 0; // Ponteiros para array1 e array2
+        int i = 0, j = 0;
 
-        // 3. Mescla os dois arrays
         while (i < array1.length && j < array2.length) {
             if (array1[i].compareTo(array2[j]) <= 0) {
                 listaUnida.add(array1[i]);
@@ -46,7 +39,6 @@ public class UniaoOrdenada {
             }
         }
 
-        // Adiciona os elementos restantes de qualquer um dos arrays
         while (i < array1.length) {
             listaUnida.add(array1[i]);
             i++;
@@ -74,5 +66,7 @@ public class UniaoOrdenada {
 
 // Saída:
 /*
-
+Array 1 original: [5, 1, 9, 3]
+Array 2 original: [8, 2, 7, 4, 6]
+Lista unida e ordenada: [1, 2, 3, 4, 5, 6, 7, 8, 9]
 */

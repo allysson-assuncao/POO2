@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class ImpressorDeMapa {
 
-    // Método genérico para imprimir os pares chave-valor de qualquer tipo de Map
+    // Método genérico para imprimir os pares chave-valor de qualquer Map
     public static <K, V> void imprimirMapa(Map<K, V> mapa) {
         if (mapa == null || mapa.isEmpty()) {
             System.out.println("O mapa está vazio ou é nulo.");
@@ -20,14 +20,14 @@ public class ImpressorDeMapa {
     }
 
     public static void main(String[] args) {
-        // Exemplo 1: Mapa de Integer para String
+        // Mapa de Integer para String
         Map<Integer, String> mapaAlunos = new HashMap<>();
         mapaAlunos.put(101, "Robert");
         mapaAlunos.put(202, "John");
         mapaAlunos.put(303, "Daniel");
         imprimirMapa(mapaAlunos);
 
-        // Exemplo 2: Mapa de String para Double
+        // Mapa de String para Double
         Map<String, Double> mapaProdutos = new HashMap<>();
         mapaProdutos.put("Laptop", 4500.00);
         mapaProdutos.put("Mouse", 150.50);

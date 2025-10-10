@@ -2,9 +2,7 @@ package org.example.generics3.Ex8;
 
 public class GenericsComVarargs {
 
-    /**
-     * Método genérico que aceita um número variável de argumentos (varargs).
-     */
+    // Método genérico que imprime um número variável de argumentos (varargs)
     public static <T> void imprimirElementos(T... elementos) {
         System.out.print("Tipo dos elementos: " + elementos.getClass().getSimpleName());
         System.out.print(" | Elementos recebidos: ");
@@ -21,21 +19,20 @@ public class GenericsComVarargs {
     public static void main(String[] args) {
         System.out.println("--- Chamadas de Teste ---");
 
-        // Chamada com Strings
         imprimirElementos("Olá", "Mundo", "Generics");
 
-        // Chamada com Integers
         imprimirElementos(10, 20, 30, 40, 50);
 
-        // Chamada com Doubles
         imprimirElementos(3.14, 1.618, 2.71);
 
-        // Chamada sem argumentos
         imprimirElementos();
     }
 }
 
 // Saída:
 /*
-
+Tipo dos elementos: String[] | Elementos recebidos: Olá Mundo Generics
+Tipo dos elementos: Integer[] | Elementos recebidos: 10 20 30 40 50
+Tipo dos elementos: Double[] | Elementos recebidos: 3.14 1.618 2.71
+Tipo dos elementos: Object[] | Elementos recebidos: [Nenhum]
 */
