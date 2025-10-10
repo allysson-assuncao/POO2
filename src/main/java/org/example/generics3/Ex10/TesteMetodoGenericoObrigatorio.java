@@ -21,8 +21,7 @@ public class TesteMetodoGenericoObrigatorio {
 
         Cachorro meuCachorro = new Cachorro();
 
-        // Chamada VÁLIDA
-        // O compilador infere que T é Cachorro
+        // Chamada válida: o compilador infere que T é Cachorro
         Collection<Cachorro> colecaoDeCachorros = teste.createNewListAndAdd(meuCachorro);
 
         System.out.println("Tipo da coleção retornada: " + colecaoDeCachorros.getClass().getName());
@@ -33,8 +32,14 @@ public class TesteMetodoGenericoObrigatorio {
         Collection<Animal> colecaoDeAnimais = teste.createNewListAndAdd(meuAnimal);
         System.out.println("Conteúdo: " + colecaoDeAnimais);
 
-        // Chamada INVÁLIDA (causaria erro de compilação)
+        // Chamada inválida (causa erro de compilação)
         // Collection<Gato> colecaoDeGatos = teste.createNewListAndAdd(meuCachorro);
-        // Erro: Incompatible types. Required: Collection<Gato>. Found: Collection<Cachorro>.
     }
 }
+
+// Saída:
+/*
+Tipo da coleção retornada: java.util.LinkedList
+Conteúdo: [Cachorro]
+Conteúdo: [Animal]
+*/
