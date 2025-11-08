@@ -23,4 +23,5 @@ public class MolhoBarbecue extends SanduicheDecorator {
         // Chama o método do wrappee e adiciona o seu custo adicional
         return super.getPreco() + 2.50;
     }
+
 }
