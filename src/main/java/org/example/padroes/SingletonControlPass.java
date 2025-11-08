@@ -1,4 +1,4 @@
-package org.example.padrões;
+package org.example.padroes;
 
 public class SingletonControlPass {
 
