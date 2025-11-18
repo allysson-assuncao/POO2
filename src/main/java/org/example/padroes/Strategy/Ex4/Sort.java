@@ -7,7 +7,7 @@ package org.example.padroes.Strategy.Ex4;
  */
 public interface Sort<T extends Comparable<T>> {
 
-    void ascending(T[] v); //ordem ascendente [cite: 17]
+    void ascending(T[] v); //ordem ascendente
 
-    void descending(T[] v); //ordem descentente [cite: 17]
+    void descending(T[] v); //ordem descentente
 }
