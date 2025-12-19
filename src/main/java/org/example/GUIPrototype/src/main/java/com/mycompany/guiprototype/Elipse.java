@@ -1,4 +1,4 @@
-package guiprototype;
+package com.mycompany.guiprototype;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -15,6 +15,7 @@ public class Elipse implements Cloneable {
         this.cor = cor;
     }
 
+    // Método responsável por desenhar a si mesmo no contexto gráfico
     public void desenhar(Graphics g) {
         g.setColor(cor);
         g.fillOval(x, y, largura, altura);
@@ -23,8 +24,7 @@ public class Elipse implements Cloneable {
     @Override
     public Elipse clone() {
         try {
-            // cópia superficial da superclasse
-            // Como usamos tipos primitivos (int) e imutáveis (Color), é suficiente.
+            // Shadow copy é suficiente para int (primitivo) e Color (imutável)
             return (Elipse) super.clone();
         } catch (CloneNotSupportedException e) {
             throw new RuntimeException("Erro ao clonar a elipse", e);

@@ -1,22 +1,17 @@
-package guiprototype;
+package com.mycompany.guiprototype;
 
 import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PainelDesenho extends javax.swing.JPanel {
-
-    public PainelDesenho() {
-        initComponents();
-    }
     
-    // Lista que armazena todas as elipses a serem desenhadas
     private List<Elipse> elipses = new ArrayList<>();
-
+ 
     // Adiciona uma nova elipse e solicita a repintura do painel
     public void adicionarElipse(Elipse e) {
         elipses.add(e);
-        repaint(); // Força o Swing a chamar o paintComponent novamente
+        repaint();
     }
     
     @Override
@@ -27,6 +22,10 @@ public class PainelDesenho extends javax.swing.JPanel {
         for (Elipse e : elipses) {
             e.desenhar(g);
         }
+    }
+
+    public PainelDesenho() {
+        initComponents();
     }
 
     @SuppressWarnings("unchecked")

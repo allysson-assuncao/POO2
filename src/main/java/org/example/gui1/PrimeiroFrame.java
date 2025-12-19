@@ -28,21 +28,167 @@ public class PrimeiroFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        PainelPrincipal = new javax.swing.JPanel();
+        labelN1 = new javax.swing.JLabel();
+        fieldN1 = new javax.swing.JTextField();
+        labelN2 = new javax.swing.JLabel();
+        fieldN2 = new javax.swing.JTextField();
+        labelResultado = new javax.swing.JLabel();
+        fieldResultado = new javax.swing.JTextField();
+        btnLimpar = new javax.swing.JButton();
+        btnAdicionar = new javax.swing.JButton();
+        btnSair = new javax.swing.JButton();
+        btnSubtrair = new javax.swing.JButton();
+        btnMultiplicar = new javax.swing.JButton();
+        btnDividir = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        PainelPrincipal.setBorder(javax.swing.BorderFactory.createTitledBorder("Operações"));
+
+        labelN1.setText("Primeiro Número");
+
+        fieldN1.addActionListener(this::fieldN1ActionPerformed);
+
+        labelN2.setText("Segundo Número");
+
+        labelResultado.setText("Resultado");
+
+        btnLimpar.setText("Limpar");
+
+        btnAdicionar.setText("Adicionar");
+        btnAdicionar.addActionListener(this::btnAdicionarActionPerformed);
+
+        btnSair.setText("Sair");
+        btnSair.addActionListener(this::btnSairActionPerformed);
+
+        btnSubtrair.setText("Subtrair");
+        btnSubtrair.addActionListener(this::btnSubtrairActionPerformed);
+
+        btnMultiplicar.setText("Multiplicar");
+        btnMultiplicar.addActionListener(this::btnMultiplicarActionPerformed);
+
+        btnDividir.setText("Dividir");
+        btnDividir.addActionListener(this::btnDividirActionPerformed);
+
+        javax.swing.GroupLayout PainelPrincipalLayout = new javax.swing.GroupLayout(PainelPrincipal);
+        PainelPrincipal.setLayout(PainelPrincipalLayout);
+        PainelPrincipalLayout.setHorizontalGroup(
+            PainelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PainelPrincipalLayout.createSequentialGroup()
+                .addGroup(PainelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(PainelPrincipalLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnSair))
+                    .addGroup(PainelPrincipalLayout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addGroup(PainelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnLimpar)
+                            .addComponent(labelResultado)
+                            .addComponent(labelN2)
+                            .addComponent(labelN1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                        .addGroup(PainelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(PainelPrincipalLayout.createSequentialGroup()
+                                .addComponent(btnAdicionar)
+                                .addGap(42, 42, 42)
+                                .addComponent(btnSubtrair)
+                                .addGap(43, 43, 43)
+                                .addComponent(btnMultiplicar)
+                                .addGap(38, 38, 38)
+                                .addComponent(btnDividir))
+                            .addGroup(PainelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(fieldN1, javax.swing.GroupLayout.DEFAULT_SIZE, 473, Short.MAX_VALUE)
+                                .addComponent(fieldN2)
+                                .addComponent(fieldResultado)))))
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+        PainelPrincipalLayout.setVerticalGroup(
+            PainelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PainelPrincipalLayout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addGroup(PainelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelN1)
+                    .addComponent(fieldN1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(PainelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelN2)
+                    .addComponent(fieldN2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(PainelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelResultado)
+                    .addComponent(fieldResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(PainelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnLimpar)
+                    .addComponent(btnAdicionar)
+                    .addComponent(btnSubtrair)
+                    .addComponent(btnMultiplicar)
+                    .addComponent(btnDividir))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 445, Short.MAX_VALUE)
+                .addComponent(btnSair)
+                .addGap(20, 20, 20))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(PainelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(PainelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void fieldN1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldN1ActionPerformed
+        // Definição das variáveis float
+        float num1, num2, result;
+        // Abaixo o parser de String para float:
+        num1 = Float.parseFloat(this.fieldN1.getText());
+        num2 = Float.parseFloat(this.fieldN2.getText());
+        // Agora podemos efetuar a adição: 
+        result = num1 + num2;
+        // Para exibir o resultado convertemos de float de volta para String:
+        this.fieldN1.setText(result + "");
+    }//GEN-LAST:event_fieldN1ActionPerformed
+
+    private void btnAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionarActionPerformed
+        this.fieldN1.setText("");
+        this.fieldN2.setText("");
+        this.fieldResultado.setText("");
+    }//GEN-LAST:event_btnAdicionarActionPerformed
+
+    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btnSairActionPerformed
+
+    private void btnSubtrairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubtrairActionPerformed
+        float num1, num2, result;
+        num1 = Float.parseFloat(this.fieldN1.getText());
+        num2 = Float.parseFloat(this.fieldN2.getText());
+        result = num1 - num2;
+        this.fieldN1.setText(result + "");
+    }//GEN-LAST:event_btnSubtrairActionPerformed
+
+    private void btnMultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicarActionPerformed
+        float num1, num2, result;
+        num1 = Float.parseFloat(this.fieldN1.getText());
+        num2 = Float.parseFloat(this.fieldN2.getText());
+        result = num1 * num2;
+        this.fieldN1.setText(result + "");
+    }//GEN-LAST:event_btnMultiplicarActionPerformed
+
+    private void btnDividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDividirActionPerformed
+        float num1, num2, result;
+        num1 = Float.parseFloat(this.fieldN1.getText());
+        num2 = Float.parseFloat(this.fieldN2.getText());
+        result = num1 / Math.max(num2, 1);
+        this.fieldN1.setText(result + "");
+    }//GEN-LAST:event_btnDividirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -70,5 +216,18 @@ public class PrimeiroFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel PainelPrincipal;
+    private javax.swing.JButton btnAdicionar;
+    private javax.swing.JButton btnDividir;
+    private javax.swing.JButton btnLimpar;
+    private javax.swing.JButton btnMultiplicar;
+    private javax.swing.JButton btnSair;
+    private javax.swing.JButton btnSubtrair;
+    private javax.swing.JTextField fieldN1;
+    private javax.swing.JTextField fieldN2;
+    private javax.swing.JTextField fieldResultado;
+    private javax.swing.JLabel labelN1;
+    private javax.swing.JLabel labelN2;
+    private javax.swing.JLabel labelResultado;
     // End of variables declaration//GEN-END:variables
 }
